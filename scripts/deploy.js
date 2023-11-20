@@ -10,13 +10,14 @@ async function main() {
   
 
 
-  const lock = await hre.ethers.deployContract("Crowdsale");
+  const crowdsale = await hre.ethers.deployContract("Crowdsale");
 
   await crowdsale.waitForDeployment();
 
-  console.log(
-    ` ${} deployed to ${.target}`
-  );
+  console
+    .log
+    // ` ${} deployed to ${}`
+    ();
 }
 
 // We recommend this pattern to be able to use async/await everywhere
